@@ -14,6 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="AxInterop.ZKFPEngXControl">
+      <HintPath>..\..\..\Downloads\Compressed\ZKTeco-ZK4500-master\dlls\AxInterop.ZKFPEngXControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ZKFPEngXControl">
+      <HintPath>..\..\..\Downloads\Compressed\ZKTeco-ZK4500-master\dlls\Interop.ZKFPEngXControl.dll</HintPath>
+    </Reference>
     <Reference Include="libzkfpcsharp">
       <HintPath>D:\AREA SISTEMAS\ZKFinger SDK V10.0-Windows-Lite\C#\lib\x64\libzkfpcsharp.dll</HintPath>
     </Reference>

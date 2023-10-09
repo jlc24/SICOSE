@@ -18,7 +18,6 @@ namespace SICOSE.Controles
 {
     public partial class ConfigControl : UserControl
     {
-
         public Home HomeForm { get; set; }
         const string VerifyButtonDefault = "Verificar";
         const string VerifyButtonToggle = "Detener Verificacion";
@@ -48,8 +47,8 @@ namespace SICOSE.Controles
 
         const int MESSAGE_CAPTURED_OK = 0x0400 + 6;
 
-        private int mfpWidth = 0;
-        private int mfpHeight = 0;
+        private int mfpWidth = 150;
+        private int mfpHeight = 150;
         byte[] FPBuffer;
 
         public ConfigControl()
@@ -160,15 +159,14 @@ namespace SICOSE.Controles
             {
                 while (!bIsTimeToDie)
                 {
-                    cbCapTmp = 2048;
+                    //cbCapTmp = 2048;
                     int ret = fpInstance.AcquireFingerprint(FPBuffer, CapTmp, ref cbCapTmp);
-
+                    bIsTimeToDie = false;
                     if (ret == zkfp.ZKFP_ERR_OK)
                     {
                         SendMessage(FormHandle, MESSAGE_CAPTURED_OK, IntPtr.Zero, IntPtr.Zero);
                     }
                     Thread.Sleep(100);
-                    
                 }
             }
             catch (Exception ex)
@@ -260,7 +258,6 @@ namespace SICOSE.Controles
                                 //lblFingerPrintCount.Text = remainingCont.ToString();
                                 string message = "Por favor proporcione su huella digital " + remainingCont + " veces mas";
                                 StatusBarMessage(message, "info");
-
                             }
                         }
                         else
