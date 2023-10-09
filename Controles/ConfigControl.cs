@@ -167,11 +167,6 @@ namespace SICOSE.Controles
                     {
                         SendMessage(FormHandle, MESSAGE_CAPTURED_OK, IntPtr.Zero, IntPtr.Zero);
                     }
-                    else
-                    {
-                        // Maneja el valor de ret según lo necesites
-                        MessageBox.Show("Error en la adquisición de la huella: " + ret, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
                     Thread.Sleep(100);
                     
                 }

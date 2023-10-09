@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <Reference Include="libzkfpcsharp">
-      <HintPath>D:\AREA SISTEMAS\ZKFinger SDK V10.0-Windows-Lite\C#\lib\x86\libzkfpcsharp.dll</HintPath>
+      <HintPath>D:\AREA SISTEMAS\ZKFinger SDK V10.0-Windows-Lite\C#\lib\x64\libzkfpcsharp.dll</HintPath>
     </Reference>
   </ItemGroup>
 
